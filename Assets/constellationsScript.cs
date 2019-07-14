@@ -15,10 +15,8 @@ public class constellationsScript : MonoBehaviour
 	public GameObject[] btnLabels;
 	public Material[] symbols;
 
-	public GameObject[] bigStars;
-	public GameObject[] smallStars;
-	public GameObject[] lines;
-	public Light[] lights;
+	public GameObject starPlane;
+	public Material[] starMats;
 
 	String[] constellations = new String[] {
 							   "Andromeda",
@@ -173,6 +171,8 @@ public class constellationsScript : MonoBehaviour
 		{
 			skyQ[i] = skyQ[i].OrderBy(x => rnd.Range(1, 1000)).ToArray();
 		}
+
+		starPlane.GetComponentInChildren<Renderer>().material = starMats[skyQ[quadIndex[0]][0]];
 
 		Debug.LogFormat("[Constellations #{0}] The displayed constellation is {1} - Sky Quadrant {2}.", moduleId, constellations[skyQ[quadIndex[0]][0]], GetSkyQuadrant(quadIndex[0]));
 

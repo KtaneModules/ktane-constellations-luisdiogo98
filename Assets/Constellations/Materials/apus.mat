@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: apus
-  m_Shader: {fileID: 4800000, guid: f84e4e450c6ae2840b267d49f10e795b, type: 3}
+  m_Shader: {fileID: 4800000, guid: 02561f4db7e9b5145baccdae9ca37856, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b08cb49e7268a854ab22728fb91e9f9b, type: 3}
+        m_Texture: {fileID: 2800000, guid: c11c8d4f48f0ebc4e9e648216b505260, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
