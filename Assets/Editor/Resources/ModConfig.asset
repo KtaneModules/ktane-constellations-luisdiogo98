@@ -13,7 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: constellations
   title: Constellations
-  description: 
+  description: "Essential tools for a bomb defuser:\r\n\r\n\t1. Protective Gear\r\n\t2.
+    Wire Cutter\r\n\t3. Astrolabe\r\n\t4. ...\n\nModule by TheThirdMan\r\nmoduleID:
+    constellation\r\n\r\nGitHub Repository: https://github.com/luisdiogo98/ktane-constellation\r\n\r\nManual
+    HTML: https://ktane.timwi.de/HTML/Constellations.html\r\nManual PDF: https://ktane.timwi.de/PDF/Constellations.pdf\r\n\r\nAny
+    problems/suggestions, feel free to contact me on the KTaNE Discord @TheThirdMan.
+    Join the KTaNE Discord here: https://discord.gg/Fv7YEDj"
   version: 1.0
   outputFolder: build
-  previewImage: {fileID: 0}
+  previewImage: {fileID: 2800000, guid: c9db0432f909ba843afdf032292a4ea9, type: 3}
