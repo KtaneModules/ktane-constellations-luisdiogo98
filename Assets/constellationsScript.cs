@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using KModkit;
+using System.Text.RegularExpressions;
 using rnd = UnityEngine.Random;
 
 public class constellationsScript : MonoBehaviour 
@@ -221,4 +222,52 @@ public class constellationsScript : MonoBehaviour
 		return null;
 	}
 
+    //twitch plays
+    private bool isValid(string s)
+    {
+        string[] valids = { "1", "2", "3", "4" };
+        for(int i = 0; i < valids.Length; i++)
+        {
+            if (valids[i].Equals(s))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    #pragma warning disable 414
+    private readonly string TwitchHelpMessage = @"!{0} press <#> [Presses the specified button by position, with 1-4 being the positions from top to bottom]";
+    #pragma warning restore 414
+
+    IEnumerator ProcessTwitchCommand(string command)
+    {
+        string[] parameters = command.Split(' ');
+        if (Regex.IsMatch(parameters[0], @"^\s*press\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+        {
+            if(parameters.Length == 2)
+            {
+                if (isValid(parameters[1]))
+                {
+                    yield return null;
+                    if (parameters[1].Equals("1"))
+                    {
+                        btns[0].OnInteract();
+                    }else if (parameters[1].Equals("2"))
+                    {
+                        btns[1].OnInteract();
+                    }
+                    else if (parameters[1].Equals("3"))
+                    {
+                        btns[2].OnInteract();
+                    }
+                    else if (parameters[1].Equals("4"))
+                    {
+                        btns[3].OnInteract();
+                    }
+                }
+            }
+            yield break;
+        }
+    }
 }
